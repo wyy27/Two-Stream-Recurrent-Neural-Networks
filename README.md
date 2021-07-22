@@ -17,7 +17,7 @@ NTU RGB+D Dataset
 ## Usage
 ### Our Training Platform:  HUAWEI Cloud
 Because the computation is too large for our laptop, we use the GPU of HUAWEI Cloud for training.
-1. Follow the link below to perform human skeleton data preprocessing.
+1. Follow the link below to perform human skeleton data preprocessing
   - [Link](https://github.com/wyy27)
   - Now we get 'all_train_sample.pkl' and 'all_test_sample.pkl' files.
 
