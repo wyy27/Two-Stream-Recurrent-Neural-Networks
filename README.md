@@ -30,23 +30,21 @@ Because the computation is too large for our laptop, we use the GPU of HUAWEI Cl
    - The structure of *two-stream-rnn* bucket is like [Data Tree](https://github.com/wyy27/Two-Stream-Recurrent-Neural-Networks/blob/main/README.md#data-tree) .
 
 4. Create a Training Job
-   - Enter *ModelArts* in the [HUAWEI CLOUD Console](https://console.huaweicloud.com/console)
+   - Enter *ModelArts* in the HUAWEI CLOUD Console
    - Choose the '*Training Management*' - '*Training Jobs*', click *Create*
    - Configure:
    
           - AI Engine: PyTorch | PyTorch-1.3.0-python3.6
           - Code Directory: /two-stream-rnn/code/
           - Boot File: /two-stream-rnn/code/main.py
-          - Training Dataset: two-stream-rnn/data/
+          - Training Dataset: /two-stream-rnn/data/
           - Training Output Path: /two-stream-rnn/output/
+          - Log Output Path	/two-stream-rnn/log/
 
-### If GPU of your computer is BIG enough: 
-1. Follow the link below to perform human skeleton data preprocessing.
-  - [Link](https://github.com/wyy27)
-2. Run the main.py.
-  ```python
-  python main.py
-  ```
+### Start Training
+In the *two-stream-rnn* bucket:
+- We can get the best model in *output* file
+- Get Logs in *log* file
 
 ## Data Tree
 ```bash
@@ -68,6 +66,14 @@ Because the computation is too large for our laptop, we use the GPU of HUAWEI Cl
     └── log
 ```
 - Executing ntu_dataset_main.py will generate 'all_train_sample.pkl' and 'all_test_sample.pkl' files.
+
+## Result
+| Datasets | Model | Accuracy (Our Model, Paper Model) | Parameters
+| :---: | :---: | :---: | :---: |
+NTU RGB+D | Temporal RNN (Hierarchical RNN) | 59.81%, 67.8% | 313 M
+NTU RGB+D | Spatial RNN (Traversal Sequence)| 61.03%, 55.2% | 229 M
+NTU RGB+D | Two-Stream RNN, 3D transform (x) | 68.32%, 68.6% | 542 M
+NTU RGB+D | Two-Stream RNN, 3D transform (o) | - , 71.3% | -
 
 
 
