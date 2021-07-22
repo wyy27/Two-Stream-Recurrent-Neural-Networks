@@ -15,22 +15,30 @@ NTU RGB+D Dataset
   Download skeleton data and then put them in 'nturgb+d_skeletons' file.
 
 ## Usage
-### Our Training Platform:  ModelArts  ( HUAWEI Cloud )
-Because the computation is too large for our laptop, we use the GPU of Huawei Cloud for training.
-1. Create a Bucket named *two-stream-rnn*.
-   - Enter the [HUAWEI CLOUD Console](https://console.huaweicloud.com/console)
-   - Choose *Object Storage Service*
-   - click on the *Create Bucket*.
+### Our Training Platform:  HUAWEI Cloud
+Because the computation is too large for our laptop, we use the GPU of HUAWEI Cloud for training.
+1. Follow the link below to perform human skeleton data preprocessing.
+  - [Link](https://github.com/wyy27)
+  - Now we get 'all_train_sample.pkl' and 'all_test_sample.pkl' files.
 
-2. Upload Object to our bucket
-   - upload code and dataset files, just like [Data Tree](https://github.com/wyy27/Two-Stream-Recurrent-Neural-Networks/blob/main/README.md#data-tree) 
+2. Create a Bucket named *two-stream-rnn*
+   - Enter *Object Storage Service* in the [HUAWEI CLOUD Console](https://console.huaweicloud.com/console)
+   - Click the *Create Bucket*
 
-AI Engine : PyTorch | PyTorch-1.3.0-python3.6
+3. Upload Object to our bucket
+   - Upload all the code and dataset files to *two-stream-rnn* bucket
+   - The structure of *two-stream-rnn* bucket is like [Data Tree](https://github.com/wyy27/Two-Stream-Recurrent-Neural-Networks/blob/main/README.md#data-tree) .
 
-- Code Directory : 		    /two-stream-rnn/code/
-- Boot File	:	 	          /two-stream-rnn/code/main.py
-- Training Dataset :		  /two-stream-rnn/data/
-- Training Output Path :	/two-stream-rnn/output/
+4. Create a Training Job
+   - Enter *ModelArts* in the [HUAWEI CLOUD Console](https://console.huaweicloud.com/console)
+   - Choose the '*Training Management*' - '*Training Jobs*', click *Create*
+   - Configure:
+   
+          - AI Engine: PyTorch | PyTorch-1.3.0-python3.6
+          - Code Directory: /two-stream-rnn/code/
+          - Boot File: /two-stream-rnn/code/main.py
+          - Training Dataset: two-stream-rnn/data/
+          - Training Output Path: /two-stream-rnn/output/
 
 ### If GPU of your computer is BIG enough: 
 1. Follow the link below to perform human skeleton data preprocessing.
