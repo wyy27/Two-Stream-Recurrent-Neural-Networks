@@ -39,7 +39,7 @@ Because the computation is too large for our laptop, we use the GPU of HUAWEI Cl
           - Boot File: /two-stream-rnn/code/main.py
           - Training Dataset: /two-stream-rnn/data/
           - Training Output Path: /two-stream-rnn/output/
-          - Log Output Path	/two-stream-rnn/log/
+          - Log Output Path: /two-stream-rnn/log/
 
 ### Start Training
 In the *two-stream-rnn* bucket:
