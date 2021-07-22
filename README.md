@@ -21,8 +21,10 @@ Because the computation is too large for our laptop, we use the GPU of Huawei Cl
    - Enter the [HUAWEI CLOUD Console](https://console.huaweicloud.com/console)
    - Choose *Object Storage Service*
    - click on the *Create Bucket*.
+
 2. Upload Object to our bucket
-   - upload code and dataset files, just like Data Tree 
+   - upload code and dataset files, just like [Data Tree](https://github.com/wyy27/Two-Stream-Recurrent-Neural-Networks/blob/main/README.md#data-tree) 
+
 AI Engine : PyTorch | PyTorch-1.3.0-python3.6
 
 - Code Directory : 		    /two-stream-rnn/code/
