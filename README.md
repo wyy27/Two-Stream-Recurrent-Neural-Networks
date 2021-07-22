@@ -27,7 +27,7 @@ Because the computation is too large for our laptop, we use the GPU of HUAWEI Cl
 
 3. Upload Object to our bucket
    - Upload all the code and dataset files to *two-stream-rnn* bucket
-   - The structure of *two-stream-rnn* bucket is like [Data Tree](https://github.com/wyy27/Two-Stream-Recurrent-Neural-Networks/blob/main/README.md#data-tree) .
+   - The structure of *two-stream-rnn* bucket is like [Data Tree](https://github.com/wyy27/Two-Stream-Recurrent-Neural-Networks#data-tree) .
 
 4. Create a Training Job
    - Enter *ModelArts* in the HUAWEI CLOUD Console
