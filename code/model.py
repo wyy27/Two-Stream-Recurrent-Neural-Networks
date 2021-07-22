@@ -1,3 +1,6 @@
+#	author: Yiying WEI & Guochu YI
+#  	date: 2021/7/1
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
