@@ -1,3 +1,6 @@
+#	author: Yiying WEI & Guochu YI
+#  	date: 2021/7/1
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -7,7 +10,6 @@ import shutil
 import time
 import moxing
 import argparse
-#from config import get_args
 from ntu_rgb_preprocess import load_data
 from model import Model
 model_dir = "/cache/result"
